@@ -1,0 +1,56 @@
+:root {
+    --projectHero-Height: 70vh;
+}
+
+
+.hero-img {
+
+
+    width: 100%;
+
+    height: var(--projectHero-Height);
+    /* z-index: -2; */
+}
+
+.hero-img::before {
+    content: "";
+    background-color: black;
+    background-image: url("../Assets/projecthero.jpg");
+    width: 100%;
+    height: var(--projectHero-Height);
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.2;
+}
+
+.hero-img h1 {
+    font-size: 2.4rem;
+
+}
+
+.hero-img p {
+    font-size: 1.4rem;
+    text-align: center;
+
+}
+
+.heading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+    .hero-img h1 {
+        font-size: 2rem;
+
+    }
+
+}

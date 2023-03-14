@@ -1,0 +1,181 @@
+:root {
+    --white-clr: #ffffff;
+    --black-clr: #000000;
+    --btn-graytextClr: rgb(32, 32, 32);
+    --text-lightClr: white;
+    --btn-primaryClr: #03DAC5;
+    --btn-secondaryClr: #BB86FC;
+    --btn-add-clr: #FF7597;
+}
+
+
+.header {
+
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+
+.header-bg {
+
+    background-color: #000000;
+
+    width: 100%;
+    height: 90px;
+    /* background-color: rgba(190, 10, 10, 0.85); */
+    transition: 0.5s;
+
+
+
+}
+
+.header a {
+
+    text-decoration: none;
+}
+
+.nav-menu,
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.stanly {
+    font-family: "Square Peg", sans-serif;
+    font-weight: 400;
+    color: var(--btn-primaryClr);
+}
+
+ul,
+.logo h1 a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-menu li a {
+    padding: 0 1rem;
+    /* border: 1px solid red; */
+    text-decoration: none;
+}
+
+/* .nav-menu li a:hover{
+   
+    background-color: rgba(255,255,255,0.2);;
+} */
+
+.menuicon {
+    display: none;
+}
+
+@media screen and (max-width: 1040px) {
+    .logo h1 {
+        font-size: 3rem;
+    }
+
+    .header {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: 80vh;
+        /* background-color: #000000;  */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 50vh;
+        left: -120%;
+        z-index: -3;
+
+        transition: 0.4s;
+
+    }
+
+    .nav-menu.active {
+        /* background-color: #000000; */
+        left: 0;
+
+    }
+
+    .nav-menu::before {
+        /* border: 1px solid red; */
+        position: absolute;
+        content: "";
+        background-color: rgb(12, 12, 12);
+        opacity: 0.9;
+        font-weight: bold;
+        width: 100%;
+        height: 100%;
+        margin-top: px;
+        border-radius: 10px;
+        /* background-color: #000000; */
+        z-index: -6;
+
+    }
+
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    .nav-menu li a {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .menuicon {
+        display: initial;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        padding: 16px 0;
+    }
+
+    /* navigation scroll black effect */
+
+    .header {
+
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        height: 90px;
+        z-index: 10;
+    }
+
+    .header-bg {
+        width: 100%;
+        height: 90px;
+        background-color: rgba(0, 0, 0, 0.85);
+        transition: 0.5s;
+        z-index: 9;
+
+
+    }
+
+
+}
